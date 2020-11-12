@@ -1,0 +1,66 @@
+$theme-colors: (
+    danger: #087b75,
+    primary:#77ebdd,
+);
+
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 80%;
+    margin: 2rem auto;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.post-block {
+    width: 100%;
+    max-width: 300px;
+    transition: 1s;
+}
+
+.post-block:hover {
+    transform: scale(1.01);
+}
+
+.sidebar {
+    background-color: #212121;
+}
+
+.nav-link {
+    color: white;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding-bottom: 5rem;
+}
+
+@media (max-width: 992px) {
+    .nav {
+        height: 100%;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .sidebar-content {
+        height: auto;
+        padding-bottom: 0;
+    }
+}
